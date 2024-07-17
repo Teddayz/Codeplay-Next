@@ -1,0 +1,12 @@
+const express = require('express');
+const userController = require('../controllers/userController');
+const dbConnect = require('../utils/dbConnect');
+
+const router = express.Router();
+
+router.get('/', userController.getProfile);
+
+router.get('/users', userController.getUsers);
+
+module.exports = router
+ 

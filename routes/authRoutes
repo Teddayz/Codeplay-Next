@@ -1,0 +1,20 @@
+const express = require('express');
+const authController = require('../controllers/authController');
+
+const router = express.Router();
+
+// Signup Routes
+router.get('/signup', authController.user_signup_get);
+router.post('/signup', authController.user_signup_post);
+
+// Login Routes
+router.get('/login', authController.user_login_get);
+router.post('/login', authController.user_login_post);
+
+// Logout Routes
+router.get('/logout', authController.user_logout_get);
+
+// Username check route
+router.post('/check-username', authController.check_username_post);
+
+module.exports = router;
